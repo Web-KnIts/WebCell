@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <div class="wrapper">
+    <h1 class="heading">Basic Calculator </h1>
+      <div class="number_box">
+        <input type="text" name="num1" id="number_1" placeholder="Enter number 1" />
+        <input
+          type="text"
+          name="num2"
+          id="number_2"
+          placeholder="Enter number 2"
+        />
+      </div>
+    <div class="operators">
+      <button  onclick="calculate('+')">+</button>
+      <button  onclick="calculate('-')">-</button>
+      <button  onclick="calculate('*')">*</button>
+      <button  onclick="calculate('/')">/</button>
+    </div>
+    <p>Result : <span id="output" ></span></p>
+    </div>
+    <script>
+      let res = 0;
+      let number1 = parseInt(document.getElementById("number_1").value);
+      let number2 = parseInt(document.getElementById("number_2").value);
+
+      function showResult() {
+        document.getElementById("output").innerText = res;
+      }
+      function calculate(args) {
+        res = 0
+        if (args == "+") {
+          res = number1 + number2;
+        } else if (args == "-") {
+          res = number1 - number2;
+        } else if (args == "*") {
+          res = number1 * number2;
+        } else {
+          res = number1 / number2;
+        }
+        console.log(res);
+        showResult();
+      }
+    </script>
+  </body>
+</html>

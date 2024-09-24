@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    width: 30%;
+    background-color: #A594F9;
+    margin: auto;
+    border-radius: 30px;
+    padding: 20px 10px;
+
+}
+.top-container{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.heading{
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    color: #001F3F;
+}
+input[type="text"]{
+    width: 60%;
+    background-color: #E5D9F2;
+    outline: none;
+    height: 40px;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    padding-left: 20px;
+}
+input[type="text"]:focus{
+    background-color: #CDC1FF;
+    outline: 2px solid lightblue;
+}
+input[type="checkbox"]{
+    width: 20px;
+    background-color: #E5D9F2;
+    outline: none;
+    height: 20px;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    padding-left: 20px;
+}
+.add-btn{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.add-btn:hover{
+    background-color: rgba(0, 0, 0, 0.34);
+
+}
+.task-box{
+    display: flex;
+    justify-content: center;
+}
+#list{
+    width: 70%;
+    margin: auto;
+}
+.li-box{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.content{
+    width: 100%;
+    padding: 0px 30px;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+.line-through{
+    text-decoration: line-through;
+}
+.close-btn{
+    padding:5px 10px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}

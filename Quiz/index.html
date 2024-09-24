@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="main">
+        <form action="" name="myForm" id="Form">
+            <h1>Quiz App</h1>
+            <div class="wrapper">
+            <p>Q1: India got independence in which year ? </p>
+            <div class="options">
+                <label for="q1_a"><input type="radio" name="q1" id="q1_a" value="1947">1947</label>
+                <label for="q1_b"><input type="radio" name="q1" id="q1_b" value="1946">1946</label>
+            </div>
+            </div>
+            <div class="wrapper">
+            <p>Q2: India got independence in which year ? </p>
+            <div class="options">
+                <label for="q2_a"><input type="radio" name="q2" id="q2_a" value="1957">1957</label>
+                <label for="q2_a"><input type="radio" name="q2" id="q2_b" value="1947">1947</label>
+            </div>
+            </div>
+            <div class="wrapper">
+                <p>Q3: India got independence in which year ? </p>
+                <div class="options">
+                    <label for="q2_a"><input type="radio" name="q3" id="q3_a" value="1967" >1967</label>
+                    <label for="q2_a"><input type="radio" name="q3" id="q3_b" value="1947">1947</label>
+                </div>
+                </div>
+                <div class="wrapper">
+                    <p>Q4: India got independence in which year ? </p>
+                    <div class="options">
+                        <label for="q1_a"><input type="radio" name="q1" id="q1_a" value="1947">1947</label>
+                        <label for="q1_b"><input type="radio" name="q1" id="q1_b" value="1999">1999</label>
+                    </div>
+                    </div>
+                <br>
+            </form>
+            <button onclick="finalizeScore()">Save</button>
+        <p id="p">Result : <span id="output"></span></p>
+        <p id="p">Previous : <span id="prevOutput"></span> </p>
+    </div>
+    <script>
+        let arr = ['q1','q2','q3']
+        let score = 0;
+        function finalizeScore()
+        {
+            arr.map((value,index)=>{
+                document.forms['myForm'][`${value}`].value === "1947"  && score++;
+            })
+            let prev = localStorage.getItem('score')
+            document.getElementById('prevOutput').innerText = prev
+            localStorage.setItem('score',score)
+            document.getElementById('output').innerText = score
+            score = 0;
+        }
+
+    </script>
+</body>
+</html>
