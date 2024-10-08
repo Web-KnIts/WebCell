@@ -1,0 +1,29 @@
+#addBar{
+width: 30vw;
+display: flex;
+margin: auto;
+}
+#searchInput{
+    width: 100%;
+    background-color: #E5D9F2;
+    outline: none;
+    height: 40px;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    padding-left: 20px;
+}
+#searchInput:focus{
+    background-color: #CDC1FF;
+    outline: 2px solid lightblue;
+}
+.add-btn{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}

@@ -79,7 +79,8 @@ list.addEventListener('click',function(e){
         })
         console.log('before deletion',task_Count)
         console.log('newArr',newArr)
-        localStorage.setItem('Task',newArr)
+        task_Count = newArr
+        localStorage.setItem('Task',task_Count)
         e.target.parentNode.remove()
     }
 })
