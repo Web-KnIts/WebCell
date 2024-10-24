@@ -26,6 +26,7 @@ function App() {
         <button onClick={()=>HandleDec()} style={{backgroundColor:'red',color:'white',fontSize:'20px'}}>
           -
         </button>
+        <button onClick={()=>setCount(0)}>Reset</button>
       </div>
     </>
   )
